@@ -27,7 +27,7 @@ If your Linux system has Eigen, GDAL, and Boost libraries installed, you can run
 ## Coordinate System Explanation
 
 For TIFF images:
-'''
+<pre>
   startLatLon--------------N-------------------------
      |                                       |
      |                                       |
@@ -37,7 +37,7 @@ For TIFF images:
      |                                       |
      |                                       |
  -------------------------S---------------endLatLon
-'''
+</pre>
 
 - The image is oriented with North at the top, East at the right
 - `startLatLon` represents the northwest (top-left) corner
