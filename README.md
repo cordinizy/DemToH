@@ -17,3 +17,6 @@ Tiff   Image:
                 -                                      - 
                 -                                      - 
            ---------------------S---------------  endLatLon 
+
+The File DemToH is executable program, if your Linux compute has Eigen, GADL, and Boost, you can Run directly.
+
