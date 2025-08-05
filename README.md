@@ -1,4 +1,4 @@
-# DenToH
+# DemToH
 
 A tool for extracting maximum and minimum elevations from DEM (Digital Elevation Model) data within specified geographic coordinates.
 
