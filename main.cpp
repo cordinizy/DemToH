@@ -55,15 +55,14 @@ Eigen::Vector2d getDEMvalue(Eigen::Vector2i &startXY, Eigen::Vector2i &endXY, ch
 
 void getTiffLatLon(const char *TifFilePath, double &leftTopLat, double &leftTopLon, double &rightTopLat, double &rightTopLon) {
 
-    // 初始化GDAL库
     GDALAllRegister();
-    // 打开TIFF文件
+    
     GDALDataset *poDataset = (GDALDataset*) GDALOpen(TifFilePath, GA_ReadOnly);
     if (poDataset == NULL) {
         printf("Can't open TIFF File.\n");
         return;
     }
-    // 获取地理转换信息
+    
     double adfGeoTransform[6];
     if (poDataset->GetGeoTransform(adfGeoTransform) != CE_None) {
         printf("Can't get GeoTransform.\n");
@@ -71,7 +70,6 @@ void getTiffLatLon(const char *TifFilePath, double &leftTopLat, double &leftTopL
         return;
     }
 
-    // 获取图像的宽度和高度
     int width = poDataset->GetRasterXSize();
     int height = poDataset->GetRasterYSize();
 
