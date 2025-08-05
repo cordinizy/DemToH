@@ -1,21 +1,43 @@
 # DenToH
-## Using DEM to obtain the max and min elevations within a certain latitude and longitude range
-## The File named 'DemToH' is executable program, if your Linux computer has Eigen, GADL, and Boost, you can run directly.
-## There must be supported by Eigen GDAL Boost Lib.
 
-1.=========================== DEM_To_H Use Method ===================
-2.           : .exe -txt [leftTopLat] [leftTopLon] [rightBottomLat] [rightBottomLon] [DEMFilePath]
-3.           : .exe -tif [tifFilePath] [DEMFilePath]
-4.           : .exe -path [dirPath] [DEMFilePath]
-5.           : ! Lat and Lon -> (North, East)
-Tiff   Image:  
-           startLatLon----------N--------------------------- 
-                -                                      - 
-                -                                      - 
-                -                                      - 
-                W                                      E
-                -                                      - 
-                -                                      - 
-                -                                      - 
-                -                                      - 
-           ---------------------S---------------  endLatLon 
+A tool for extracting maximum and minimum elevations from DEM (Digital Elevation Model) data within specified geographic coordinates.
+
+## Dependencies
+- Eigen
+- GDAL
+- Boost
+
+## Installation
+If your Linux system has Eigen, GDAL, and Boost libraries installed, you can run the executable directly.
+
+## Usage
+
+### Command Line Options:
+
+1. **Using latitude/longitude coordinates:**
+   ./DemToH -txt [leftTopLat] [leftTopLon] [rightBottomLat] [rightBottomLon] [DEMFilePath]
+   - Coordinates format: (North, East)
+
+2. **Using TIFF image bounds:**
+   ./DemToH -tif [tifFilePath] [DEMFilePath]
+
+3. **Processing all TIFF files in a directory:**
+   ./DemToH -path [dirPath] [DEMFilePath]
+
+## Coordinate System Explanation
+
+For TIFF images:
+startLatLon--------------N---------------------------
+     |                                       |
+     |                                       |
+     |                                       |
+     W                                       E
+     |                                       |
+     |                                       |
+     |                                       |
+-------------------------S---------------endLatLon
+
+
+- The image is oriented with North at the top, East at the right
+- `startLatLon` represents the northwest (top-left) corner
+- `endLatLon` represents the southeast (bottom-right) corner
