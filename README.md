@@ -27,15 +27,15 @@ If your Linux system has Eigen, GDAL, and Boost libraries installed, you can run
 ## Coordinate System Explanation
 
 For TIFF images:
-startLatLon--------------N---------------------------
-     |                                       |
-     |                                       |
-     |                                       |
-     W                                       E
-     |                                       |
-     |                                       |
-     |                                       |
--------------------------S---------------endLatLon
+- startLatLon--------------N---------------------------
+-     |                                       |
+-     |                                       |
+-     |                                       |
+-     W                                       E
+-     |                                       |
+-     |                                       |
+-     |                                       |
+- -------------------------S---------------endLatLon
 
 
 - The image is oriented with North at the top, East at the right
