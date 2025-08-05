@@ -7,7 +7,7 @@ There must be supported by Eigen GDAL Boost Lib.
            : .exe -tif [tifFilePath] [DEMFilePath]
            : .exe -path [dirPath] [DEMFilePath]
            : ! Lat and Lon -> (North, East)
-Tiff   Image: 
+Tiff   Image:  
            startLatLon----------N--------------------------- 
                 -                                      - 
                 -                                      - 
